@@ -1,0 +1,22 @@
+.popup__input {
+    display: block;
+    opacity: 0.2;
+    border-bottom: 1px solid #000000;
+}
+
+.popup__input:focus {
+    outline: none;
+    border-bottom: 1px solid #000000;
+    opacity: 1;
+}
+
+.popup__input:invalid {
+    border-bottom: 1px solid red;
+  }
+
+  @media screen and (max-width: 640px) {
+    .popup__input {
+      padding-bottom: 9px;
+    }
+  }
+

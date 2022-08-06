@@ -1,0 +1,14 @@
+.popup__insert {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.21;
+}
+
+@media screen and (max-width: 640px) {
+    .popup__insert {
+        margin-bottom: 46px;
+    }
+}

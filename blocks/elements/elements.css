@@ -1,0 +1,18 @@
+.elements {
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    column-gap: 17px;
+    list-style: none;
+    max-width: 880px;
+    padding: 0;
+}
+
+@media screen and (max-width: 920px) {
+    .elements {
+        max-width: 640px;
+        justify-content: center;
+    }
+}
+

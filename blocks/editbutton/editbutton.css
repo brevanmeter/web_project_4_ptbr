@@ -1,0 +1,10 @@
+.editbutton {
+    max-width: 24px;
+    border: 1px solid #FFFFFF;
+    background-color: black;
+}
+
+.editbutton:hover{
+    opacity: 0.6;
+    cursor: pointer;
+}

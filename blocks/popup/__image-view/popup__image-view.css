@@ -1,0 +1,16 @@
+.popup__image-view {
+    margin: 0 auto;
+    max-width: 75vw;
+    max-height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+@media screen and (max-width: 768px) {
+    .popup__image-view {
+        max-width: 240px;
+    }
+}
