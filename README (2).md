@@ -12,6 +12,6 @@ Nesse projeto foram utilizadas as seguintes teorias: HTML, CSS semântico, metod
 
 **GitHub Pages**
 
-* [Link para o projeto publicado no Github Pages](https://brevanmeter.github.io/web_project_4/)
+* [Link para o projeto publicado no Github Pages](https://brevanmeter.github.io/web_project_4_ptbr/)
 
 
