@@ -2,9 +2,16 @@
 
 ### Visão Geral
 
-Projeto desenvolvido durante o curso de Web Development da Practium by Yandex. A
-pagina mostra diversos cards com diferente localizações dos Estados Unidos.
-Nesse projeto foram utilizadas as seguintes teorias: HTML, CSS semântico, metodologia BEM para nomenclatura e estrutura de arquivos, Javascript, manipulação de array e utilização de DOM.
+Este é um projeto de uma página, elaborado durante o curso de desenvolvimento web Practicum by Yandex.
+
+O Projeto consiste em visualizar o layout no Figma e transformá-lo em código, bem como adaptá-lo às novas tecnologias abordadas ao longo do curso.
+
+Tecnologias Utilizadas
+
+Método BEM de organização de arquivos
+HTML responsivo com tags semânticas
+CSS com layout responsivo -- flex-box -- mediaqueries
+Javascript -- funções -- métodos de Array -- métodos de elementos -- Validação instantânea de formulários 
 
 **Figma**
 
