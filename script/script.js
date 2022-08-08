@@ -24,10 +24,10 @@ const popupEditProfile = document.querySelector(".popup-editprofile");
 const popupAddCard = document.querySelector(".popup-addcard");
 const popupImage = document.querySelector(".popup-image");
 
-
 // GERA OS CARDS INICIAIS
 
-const initialCards = [{
+const initialCards = [
+  {
     name: "Vale de Yosemite",
     link: "https://code.s3.yandex.net/web-code/yosemite.jpg",
   },
@@ -53,7 +53,6 @@ const initialCards = [{
   },
 ];
 
-
 function callInitialCards() {
   elements.innerHTML = "";
   initialCards.map(function (item) {
@@ -64,34 +63,31 @@ function callInitialCards() {
     return elements.append(cardElement);
   });
   callPopupImage();
-  callLikeButton();
-  deleteCardButton();
+  handleLikeIcon();
+  deleteCard();
 }
-
-
 
 // ABRE O POPUP DE EDIÇÃO DE PERFIL E SALVA OS DADOS
 
-function editPopupProfile() {
+function handleProfile() {
   popupEditProfile.classList.toggle("popup_opened");
 }
 
-function savePopup(evt) {
+function savePopupProfile(evt) {
   profileName.textContent = insertName.value;
   profileDescription.textContent = insertAbout.value;
-  editPopupProfile();
 }
 
-editButton.addEventListener("click", editPopupProfile);
-popupSaveButton.addEventListener("click", savePopup);
+editButton.addEventListener("click", handleProfile);
+popupSaveButton.addEventListener("click", savePopupProfile);
 
 // ABRE O POP UP DE ADIÇÃO DE CARTÃO
 
-function callPopupAddCard() {
+function handleAddCard() {
   popupAddCard.classList.add("popup_opened");
 }
 
-addButton.addEventListener("click", callPopupAddCard);
+addButton.addEventListener("click", handleAddCard);
 
 // ABRE AS IMAGENS DO CARDS
 
@@ -112,7 +108,6 @@ function createPopupImage(evt) {
 }
 
 // FECHA OS POP UPS DE ADIÇÃO DE CARTÃO, EDICAO DE PERFIL E IMAGEM
-
 
 closePopupIcon.forEach(function (item) {
   item.addEventListener("click", function () {
@@ -147,9 +142,7 @@ formEditProfile.addEventListener("submit", function (evt) {
   profileName.textContent = insertName.value;
   profileDescription.textContent = insertAbout.value;
   closePopup(popupEditProfile);
-  evt.preventDefault();
 });
-
 
 // Salva dados do AddCards e inclui na lista
 
@@ -163,7 +156,6 @@ function addCard(evt) {
   callInitialCards();
   closePopup(popupAddCard);
   clearAddCardPopup();
-  evt.preventDefault();
 }
 
 function saveCard() {
@@ -180,7 +172,7 @@ function clearAddCardPopup() {
 
 // FAZ COM QUE OS CARDS SEJAM LIKED
 
-function callLikeButton() {
+function handleLikeIcon() {
   const likeButton = document.querySelectorAll(".card__like-button");
   likeButton.forEach(function (item) {
     item.addEventListener("click", function (evt) {
@@ -191,7 +183,7 @@ function callLikeButton() {
 
 // DELETA OS CARDS
 
-function deleteCardButton() {
+function deleteCard() {
   const deleteButton = document.querySelectorAll(".card__trash");
   deleteButton.forEach(function (item) {
     item.addEventListener("click", function () {
@@ -199,6 +191,5 @@ function deleteCardButton() {
     });
   });
 }
-
 
 callInitialCards();

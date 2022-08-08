@@ -1,96 +1,162 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Around the U.S.</title>
-    <link rel="stylesheet" href="./pages/index.css">
-</head>
+    <link rel="stylesheet" href="./pages/index.css" />
+  </head>
 
-<body class="page">
+  <body class="page">
     <header class="header">
-        <img class="header__logo" src="images/header_logo.svg" alt="Logo do site Around the US">
+      <img
+        class="header__logo"
+        src="images/header_logo.svg"
+        alt="Logo do site Around the US"
+      />
     </header>
     <main class="main">
-        <div class="popup popup-editprofile">
-            <section class="popup__container">
-                <a class="popup__close-icon">
-                    <img src="images/closeicon.svg" alt="Icone de fechar">
-                </a>
-                <h2 class="popup__title">Editar perfil</h2>
-                <form name="formEditProfile" class="popup__insert popup__form" novalidate>
-                    <input type="text" id="name-input" name="name" class="popup__insert-name popup__input"
-                        placeholder="Nome" minlength="2" maxlength="40" required>
-                    <span class="popup__error name-input-error"></span>
-                    <input type="text" id="about-input" name="about" class="popup__insert-about popup__input"
-                        placeholder="Explorar" minlength="2" maxlength="200" required>
-                    <span class="popup__error about-input-error"></span>
-                    <button type="submit" id="edit-profile_save" name="button" class="popup__button popup__save-button">Salvar</button>
-                </form> 
-            </section>
-        </div>
-        <div class="popup popup-addcard">
-            <section class="popup__container">
-                <a class="popup__close-icon popup__close-icon_add">
-                    <img src="images/closeicon.svg" alt="Icone de fechar">
-                </a>
-                <h2 class="popup__title">Novo local</h2>
-                <form name="formAddCard" class="popup__insert popup__form" novalidate>
-                    <input type="text" id="title-input" name="title" class="popup__insert-title popup__input"
-                        placeholder="Título" minlength="2" maxlength="30" required>
-                    <span class="popup__error title-input-error"></span>
-                    <input type="url" id="link-input" name="link" class="popup__insert-link popup__input"
-                        placeholder="Link da imagem" required>
-                    <span class="popup__error link-input-error"></span>
-                    <button type="submit" id="create-card" name="button" class="popup__button popup__save-button popup__save-button_card">Criar</button>
-                </form>
-            </section>
-        </div>
-        <div class="popup popup-image">
-            <section class="popup__container popup__container_img">
-                <figure class="figure">
-                    <a class="popup__close-icon popup__close-icon_img">
-                        <img src="images/closeicon.svg" alt="Icone de fechar">
-                    </a>
-                    <img src="images/image_1.jpg" alt="" class="popup__image-view">
-                    <figcaption class="popup__caption">aaa</figcaption>
-                </figure>
-            </section>
-        </div>
-        <section class="profile">
-            <img class="profile__avatar" src="images/profile_image.jpg" alt="Foto de perfil de Jacques Cousteau">
-            <div class="profile__info">
-                <div class="profile__top">
-                    <h1 class="profile__name">Jacques Cousteau</h1>
-                    <button class="editbutton">
-                        <img src="images/editbutton.svg" class="editbutton__img" alt="Icone de editar">
-                    </button>
-                </div>
-                <p class="profile__description">Explorar</p>
-            </div>
-            <button class="profile__add-button">+</button>
+      <div class="popup popup-editprofile">
+        <section class="popup__container">
+          <a class="popup__close-icon">
+            <img src="images/closeicon.svg" alt="Icone de fechar" />
+          </a>
+          <h2 class="popup__title">Editar perfil</h2>
+          <form
+            name="formEditProfile"
+            class="popup__insert popup__form"
+            novalidate
+          >
+            <input
+              type="text"
+              id="name-input"
+              value="Jacques Cousteau"
+              name="name"
+              class="popup__insert-name popup__input"
+              placeholder="Nome"
+              minlength="2"
+              maxlength="40"
+              required
+            />
+            <span class="popup__error name-input-error"></span>
+            <input
+              type="text"
+              id="about-input"
+              name="about"
+              value="Explorar"
+              class="popup__insert-about popup__input"
+              placeholder="Explorar"
+              minlength="2"
+              maxlength="200"
+              required
+            />
+            <span class="popup__error about-input-error"></span>
+            <button
+              type="submit"
+              id="edit-profile_save"
+              name="button"
+              class="popup__button popup__save-button"
+            >
+              Salvar
+            </button>
+          </form>
         </section>
-        <ul class="elements"></ul>
+      </div>
+      <div class="popup popup-addcard">
+        <section class="popup__container">
+          <a class="popup__close-icon popup__close-icon_add">
+            <img src="images/closeicon.svg" alt="Icone de fechar" />
+          </a>
+          <h2 class="popup__title">Novo local</h2>
+          <form name="formAddCard" class="popup__insert popup__form" novalidate>
+            <input
+              type="text"
+              id="title-input"
+              name="title"
+              class="popup__insert-title popup__input"
+              placeholder="Título"
+              minlength="2"
+              maxlength="30"
+              required
+            />
+            <span class="popup__error title-input-error"></span>
+            <input
+              type="url"
+              id="link-input"
+              name="link"
+              class="popup__insert-link popup__input"
+              placeholder="Link da imagem"
+              required
+            />
+            <span class="popup__error link-input-error"></span>
+            <button
+              type="submit"
+              id="create-card"
+              name="button"
+              class="popup__button popup__save-button popup__save-button_card"
+            >
+              Criar
+            </button>
+          </form>
+        </section>
+      </div>
+      <div class="popup popup-image">
+        <section class="popup__container popup__container_img">
+          <figure class="figure">
+            <a class="popup__close-icon popup__close-icon_img">
+              <img src="images/closeicon.svg" alt="Icone de fechar" />
+            </a>
+            <img src="images/image_1.jpg" alt="" class="popup__image-view" />
+            <figcaption class="popup__caption">aaa</figcaption>
+          </figure>
+        </section>
+      </div>
+      <section class="profile">
+        <img
+          class="profile__avatar"
+          src="images/profile_image.jpg"
+          alt="Foto de perfil de Jacques Cousteau"
+        />
+        <div class="profile__info">
+          <div class="profile__top">
+            <h1 class="profile__name">Jacques Cousteau</h1>
+            <button class="editbutton">
+              <img
+                src="images/editbutton.svg"
+                class="editbutton__img"
+                alt="Icone de editar"
+              />
+            </button>
+          </div>
+          <p class="profile__description">Explorar</p>
+        </div>
+        <button class="profile__add-button">+</button>
+      </section>
+      <ul class="elements"></ul>
     </main>
     <footer class="footer">
-        <p class="footer__text">© 2021 Around The U.S.</p>
+      <p class="footer__text">© 2021 Around The U.S.</p>
     </footer>
     <template class="card__template">
-        <li class="card">
-            <img src="images/trash.svg" class="card__trash" alt="Trash icon">
-            <img src="images/image_1.jpg" class="card__image" alt="Yosemite Valley Image">
-            <div class="card__rectangle">
-                <p class="card__text">
-                    Texto do cartão
-                </p>
-                <img src="images/likebutton.svg" class="card__like-button" alt="like heart button image">
-            </div>
-        </li>
+      <li class="card">
+        <img src="images/trash.svg" class="card__trash" alt="Trash icon" />
+        <img
+          src="images/image_1.jpg"
+          class="card__image"
+          alt="Yosemite Valley Image"
+        />
+        <div class="card__rectangle">
+          <p class="card__text">Texto do cartão</p>
+          <img
+            src="images/likebutton.svg"
+            class="card__like-button"
+            alt="like heart button image"
+          />
+        </div>
+      </li>
     </template>
     <script src="./script/script.js"></script>
     <script src="./script/validate.js"></script>
-</body>
-
+  </body>
 </html>
