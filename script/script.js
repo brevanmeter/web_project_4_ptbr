@@ -1,9 +1,8 @@
 const editButton = document.querySelector(".editbutton");
-const closePopupIcon = document.querySelectorAll(".popup__close-icon");
 const addButton = document.querySelector(".profile__add-button");
 const saveButtonAddCard = document.querySelector(".popup__save-button_card");
 const popupSaveButton = document.querySelector(".popup__button");
-const popup = document.querySelectorAll(".popup");
+
 
 const profileName = document.querySelector(".profile__name");
 const profileDescription = document.querySelector(".profile__description");
@@ -24,7 +23,6 @@ const popupEditProfile = document.querySelector(".popup-editprofile");
 const popupAddCard = document.querySelector(".popup-addcard");
 const popupImage = document.querySelector(".popup-image");
 
-// GERA OS CARDS INICIAIS
 
 const initialCards = [
   {
@@ -67,7 +65,6 @@ function callInitialCards() {
   deleteCard();
 }
 
-// ABRE O POPUP DE EDIÇÃO DE PERFIL E SALVA OS DADOS
 
 function handleProfile() {
   popupEditProfile.classList.toggle("popup_opened");
@@ -81,7 +78,7 @@ function savePopupProfile(evt) {
 editButton.addEventListener("click", handleProfile);
 popupSaveButton.addEventListener("click", savePopupProfile);
 
-// ABRE O POP UP DE ADIÇÃO DE CARTÃO
+
 
 function handleAddCard() {
   popupAddCard.classList.add("popup_opened");
@@ -89,7 +86,6 @@ function handleAddCard() {
 
 addButton.addEventListener("click", handleAddCard);
 
-// ABRE AS IMAGENS DO CARDS
 
 function callPopupImage() {
   const cardImage = document.querySelectorAll(".card__image");
@@ -107,7 +103,8 @@ function createPopupImage(evt) {
   popupImage.classList.add("popup_opened");
 }
 
-// FECHA OS POP UPS DE ADIÇÃO DE CARTÃO, EDICAO DE PERFIL E IMAGEM
+
+const closePopupIcon = document.querySelectorAll(".popup__close-icon");
 
 closePopupIcon.forEach(function (item) {
   item.addEventListener("click", function () {
@@ -119,6 +116,8 @@ function closePopup(item) {
   item.classList.remove("popup_opened");
   formAddCard.reset();
 }
+
+const popup = document.querySelectorAll(".popup");
 
 popup.forEach(function (item) {
   item.addEventListener("click", function (evt) {
@@ -136,7 +135,6 @@ popup.forEach(function (item) {
   });
 });
 
-// Salva dados do Edit Profile
 
 formEditProfile.addEventListener("submit", function (evt) {
   profileName.textContent = insertName.value;
@@ -144,7 +142,6 @@ formEditProfile.addEventListener("submit", function (evt) {
   closePopup(popupEditProfile);
 });
 
-// Salva dados do AddCards e inclui na lista
 
 function addCard(evt) {
   const newCard = {
@@ -170,7 +167,6 @@ function clearAddCardPopup() {
   formAddCard.reset();
 }
 
-// FAZ COM QUE OS CARDS SEJAM LIKED
 
 function handleLikeIcon() {
   const likeButton = document.querySelectorAll(".card__like-button");
@@ -181,7 +177,6 @@ function handleLikeIcon() {
   });
 }
 
-// DELETA OS CARDS
 
 function deleteCard() {
   const deleteButton = document.querySelectorAll(".card__trash");
