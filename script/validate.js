@@ -13,6 +13,7 @@ const toggleButtonState = (inputList, buttonElement, inactiveButtonClass) => {
     buttonElement.removeAttribute("disabled", "");
   }
 };
+  
 
 const checkInputValidity = (
   formElement,
