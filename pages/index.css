@@ -45,7 +45,7 @@
 @import url(../blocks/elements/elements.css);
 
 @import url(../blocks/card/card.css);
-@import url(../blocks/card/template/card__template.css);
+@import url(../blocks/card/template/card-template.css);
 @import url(../blocks/card/__image/card__image.css);
 @import url(../blocks/card/__trash/card__trash.css);
 @import url(../blocks/card/__rectangle/card__rectangle.css);

@@ -7,7 +7,7 @@ const popupSaveButton = document.querySelector(".popup__button");
 const profileName = document.querySelector(".profile__name");
 const profileDescription = document.querySelector(".profile__description");
 
-const cardTemplate = document.querySelector(".card__template").content;
+const cardTemplate = document.querySelector(".card-template").content;
 const elements = document.querySelector(".elements");
 
 const formEditProfile = document.forms.formEditProfile;
@@ -103,7 +103,6 @@ function createPopupImage(evt) {
   popupImage.classList.add("popup_opened");
 }
 
-
 const closePopupIcon = document.querySelectorAll(".popup__close-icon");
 
 closePopupIcon.forEach(function (item) {
@@ -137,9 +136,11 @@ popup.forEach(function (item) {
 
 
 formEditProfile.addEventListener("submit", function (evt) {
+  evt.preventDefault();
   profileName.textContent = insertName.value;
   profileDescription.textContent = insertAbout.value;
   closePopup(popupEditProfile);
+  formEditProfile.reset();
 });
 
 

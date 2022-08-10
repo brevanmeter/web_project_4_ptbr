@@ -52,6 +52,13 @@ const hideInputError = (
   errorElement.textContent = "";
 };
 
+const resetFormInputsError = (formElement) => {
+  const inputElements = formElement.querySelectorAll("popup__input");
+  inputElements.forEach((inputElement) => {
+    hideInputError(formElement, inputElement);
+  });
+};
+
 const setEventListeners = (
   formElement,
   inputSelector,
