@@ -11,7 +11,7 @@ const cardTemplate = document.querySelector(".card-template").content;
 const elements = document.querySelector(".elements");
 
 const formEditProfile = document.forms.formEditProfile;
-
+const formAddCard = document.forms.formAddCard;
 
 const insertTitle = formAddCard.elements.title;
 const insertLink = formAddCard.elements.link;
