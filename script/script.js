@@ -11,7 +11,7 @@ const cardTemplate = document.querySelector(".card-template").content;
 const elements = document.querySelector(".elements");
 
 const formEditProfile = document.forms.formEditProfile;
-const formAddCard = document.forms.formAddCard;
+
 
 const insertTitle = formAddCard.elements.title;
 const insertLink = formAddCard.elements.link;
@@ -143,17 +143,21 @@ formEditProfile.addEventListener("submit", function (evt) {
   formEditProfile.reset();
 });
 
-
 function addCard(evt) {
   const newCard = {
     name: insertTitle.value,
     link: insertLink.value,
   };
-
   initialCards.unshift(newCard);
   callInitialCards();
   closePopup(popupAddCard);
   clearAddCardPopup();
+  evt.preventDefault();
+}
+
+function clearAddCardPopup() {
+  closePopup(popupAddCard);
+  formAddCard.reset();
 }
 
 function saveCard() {
@@ -162,12 +166,6 @@ function saveCard() {
 }
 
 saveButtonAddCard.addEventListener("click", saveCard);
-
-function clearAddCardPopup() {
-  closePopup(popupAddCard);
-  formAddCard.reset();
-}
-
 
 function handleLikeIcon() {
   const likeButton = document.querySelectorAll(".card__like-button");
@@ -187,5 +185,6 @@ function deleteCard() {
     });
   });
 }
+
 
 callInitialCards();
