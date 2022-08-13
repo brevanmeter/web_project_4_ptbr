@@ -143,6 +143,8 @@ formEditProfile.addEventListener("submit", function (evt) {
   formEditProfile.reset();
 });
 
+formAddCard.addEventListener("submit", addCard);
+
 function addCard(evt) {
   const newCard = {
     name: insertTitle.value,
@@ -152,20 +154,12 @@ function addCard(evt) {
   callInitialCards();
   closePopup(popupAddCard);
   clearAddCardPopup();
-  evt.preventDefault();
 }
 
 function clearAddCardPopup() {
   closePopup(popupAddCard);
   formAddCard.reset();
 }
-
-function saveCard() {
-  addCard();
-  popupAddCard.classList.remove("popup_opened");
-}
-
-saveButtonAddCard.addEventListener("click", saveCard);
 
 function handleLikeIcon() {
   const likeButton = document.querySelectorAll(".card__like-button");
