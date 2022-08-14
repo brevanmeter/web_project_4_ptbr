@@ -15,7 +15,7 @@ const formAddCard = document.forms.formAddCard;
 
 const insertTitle = formAddCard.elements.title;
 const insertLink = formAddCard.elements.link;
-const insertButton = formAddCard.elements.button;
+const addCardBtn =  document.getElementById('create-card');
 
 const insertName = formEditProfile.elements.name;
 const insertAbout = formEditProfile.elements.about;
@@ -160,7 +160,8 @@ function addCard(evt) {
 function clearAddCardPopup() {
   closePopup(popupAddCard);
   formAddCard.reset();
-  document.getElementById('create-card').disabled = false;
+  addCardBtn.disabled = false;
+  addCardBtn.classList.add('popup__button_disabled');
 }
 
 function handleLikeIcon() {
