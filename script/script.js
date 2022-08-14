@@ -160,7 +160,7 @@ function addCard(evt) {
 function clearAddCardPopup() {
   closePopup(popupAddCard);
   formAddCard.reset();
-  insertButton.disabled = false;
+  document.getElementById('create-card').disabled = false;
 }
 
 function handleLikeIcon() {
