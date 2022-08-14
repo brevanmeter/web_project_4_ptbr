@@ -15,6 +15,7 @@ const formAddCard = document.forms.formAddCard;
 
 const insertTitle = formAddCard.elements.title;
 const insertLink = formAddCard.elements.link;
+const insertButton = formAddCard.elements.button;
 
 const insertName = formEditProfile.elements.name;
 const insertAbout = formEditProfile.elements.about;
@@ -159,6 +160,7 @@ function addCard(evt) {
 function clearAddCardPopup() {
   closePopup(popupAddCard);
   formAddCard.reset();
+  insertButton.disabled = false;
 }
 
 function handleLikeIcon() {
